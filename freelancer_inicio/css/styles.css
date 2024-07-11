@@ -4,11 +4,13 @@
     --primario: #ffc107;
     --secundario: #0097A7;
     --gris: #757575;
+    --grisClaro: #DFE9F3;
 }
 
+/* Globales */
 html {
     font-size: 62.5% ;
-    box-sizing: border-box;
+    box-sizing: border-box; /*Hack para box model */
 }
 *, *::before, *:after {
     box-sizing: inherit;
@@ -16,7 +18,39 @@ html {
 body {
     font-size: 16px; /* 1rem = 10px */
     font-family: "Krub", sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%); /*FONDO DE LA WEB DEGRADADO*/
 }
+
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 480px) {
+    .boton {
+        width: auto;
+    }
+}
+
+.sombra{
+    /*codigo generado por css matics solo la pusimos dentro de una clase llamada sombra*/
+    -webkit-box-shadow: 10px 5px 15px 0px rgba(112,112,112,0.48);
+    -moz-box-shadow: 10px 5px 15px 0px rgba(112,112,112,0.48);
+    box-shadow: 10px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+/* Tipografía */
 h1 {
     font-size: 3.8rem;
 }
@@ -30,7 +64,7 @@ h3 {
 h1, h2, h3 {
     text-align: center;  
 }
-
+/* Titulos */
 .titulo span{
     font-size: 2rem;
 }
@@ -49,6 +83,7 @@ la clase de contenedor OJO en la clase navegacion-principal */
     margin: 0 auto;
 }
 
+/* Navegación Principal */
 .nav-bg {
     background-color: var(--secundario);
 }
@@ -78,14 +113,14 @@ la clase de contenedor OJO en la clase navegacion-principal */
     background-color: var(--primario);
     color: var(--negro);
 }
-
+/* hero */
 .hero{
     background-image: url(../img/hero.jpg);
     background-repeat: none !important;
     background-size: cover;
     height: 450px;
-    
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .contenido-hero{
@@ -106,7 +141,8 @@ la clase de contenedor OJO en la clase navegacion-principal */
     color: var(--blanco);
 }
 
-.ubicacion{
+.contenido-hero  .ubicacion{
     display: flex;
     align-items: flex-end;
 }
+
