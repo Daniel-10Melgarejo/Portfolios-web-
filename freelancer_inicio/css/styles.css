@@ -141,8 +141,16 @@ la clase de contenedor OJO en la clase navegacion-principal */
     color: var(--blanco);
 }
 
-.contenido-hero  .ubicacion{
+.contenido-hero .ubicacion{
     display: flex;
     align-items: flex-end;
 }
 
+/* Servicios */
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /*dividimos en fracciones el 100% es como poner 33.3% tres veces */
+        
+    }
+}
